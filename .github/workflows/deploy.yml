@@ -7,15 +7,13 @@ on:
 
 jobs:
   build-and-deploy:
-
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout
-      uses: zhujunxi/view-ui_template@master
+      uses: actions/checkout@master
 
     - name: Build and Deploy
-      uses: zhujunxi/view-ui_template@master
+      uses: JamesIves/github-pages-deploy-action@master
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages

@@ -17,4 +17,4 @@ jobs:
       with:
         access-token: ${{ secrets.ACCESS_TOKEN }}
         source-directory: dist
-        build-command: yarn install & yarn build
+        build-command: yarn add & yarn build

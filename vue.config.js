@@ -1,3 +1,3 @@
 module.exports = {
-    baseUrl: 'view-ui_template'
+    baseUrl: process.env.NODE_ENV === 'production' ? '/view-ui_template/' : '/'
 }

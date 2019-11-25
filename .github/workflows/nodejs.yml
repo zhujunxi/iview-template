@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: zhujunxi/view-ui_template@master
 
     - name: Build and Deploy
       uses: zhujunxi/view-ui_template@master

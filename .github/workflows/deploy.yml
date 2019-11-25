@@ -1,0 +1,20 @@
+name: deploy-to-pages
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Build and Deploy
+      uses: sterlingwes/gh-pages-deploy-action@v1.1
+      with:
+        access-token: ${{ secrets.ACCESS_TOKEN }}
+        source-directory: dist
+        build-command: yarn build

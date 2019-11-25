@@ -13,9 +13,8 @@ jobs:
       uses: actions/checkout@master
 
     - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build
-        BUILD_SCRIPT: yarn install && yarn build
+      uses: sterlingwes/gh-pages-deploy-action@v1.1
+      with:
+        access-token: ${{ secrets.ACCESS_TOKEN }}
+        source-directory: dist
+        build-command: yarn install & yarn build
